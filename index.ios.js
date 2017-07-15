@@ -8,6 +8,8 @@ import React, { Component } from 'react'
 import { AppRegistry, StyleSheet, Text, View, Button } from 'react-native'
 import Toast from '@merryjs/toast'
 console.log(Toast)
+import PhotoViewer from '@merryjs/photo-viewer'
+console.log(PhotoViewer)
 export default class MerryExamples extends Component {
   render() {
     return (
@@ -26,7 +28,19 @@ export default class MerryExamples extends Component {
         />
         <Button
           title="Show Toast With Gravity"
-          onPress={() => Toast.showWithGravity('A merry toast', Toast.SHORT,Toast.CENTER)}
+          onPress={() =>
+            Toast.showWithGravity('A merry toast', Toast.SHORT, Toast.CENTER)}
+        />
+        <Button
+          title="show images"
+          onPress={() =>
+            PhotoViewer.show([
+              {
+                image:
+                  'https://github.com/Carthage/Carthage/raw/master/Logo/PNG/header.png',
+                imageData: null,
+              },
+            ])}
         />
       </View>
     )

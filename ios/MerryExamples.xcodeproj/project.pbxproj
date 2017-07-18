@@ -34,6 +34,11 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* MerryExamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MerryExamplesTests.m */; };
+		364DEE3A1F1E7F2000136B5F /* libMerryPhotoViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 364DEE1B1F1E7F1200136B5F /* libMerryPhotoViewer.a */; };
+		364DEE3D1F1E7F6B00136B5F /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364DEE3B1F1E7F6B00136B5F /* FLAnimatedImage.framework */; };
+		364DEE3E1F1E7F6B00136B5F /* FLAnimatedImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 364DEE3B1F1E7F6B00136B5F /* FLAnimatedImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		364DEE3F1F1E7F6B00136B5F /* NYTPhotoViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364DEE3C1F1E7F6B00136B5F /* NYTPhotoViewer.framework */; };
+		364DEE401F1E7F6B00136B5F /* NYTPhotoViewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 364DEE3C1F1E7F6B00136B5F /* NYTPhotoViewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36AAC1ED1F18CAC5004BFDC1 /* libMerryToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 361F8A671F17F2CD007B71D3 /* libMerryToast.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -116,6 +121,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = MerryToast;
+		};
+		364DEE1A1F1E7F1200136B5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 364DEE161F1E7F1200136B5F /* MerryPhotoViewer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = MerryPhotoViewer;
 		};
 		36F1FDF11F17B7C4001EDD87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -273,6 +285,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				364DEE3E1F1E7F6B00136B5F /* FLAnimatedImage.framework in Embed Frameworks */,
+				364DEE401F1E7F6B00136B5F /* NYTPhotoViewer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +314,9 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* MerryExamples-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MerryExamples-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* MerryExamples-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MerryExamples-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		364DEE161F1E7F1200136B5F /* MerryPhotoViewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MerryPhotoViewer.xcodeproj; path = "../../photo-viewer/ios/MerryPhotoViewer.xcodeproj"; sourceTree = "<group>"; };
+		364DEE3B1F1E7F6B00136B5F /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = Carthage/Build/iOS/FLAnimatedImage.framework; sourceTree = "<group>"; };
+		364DEE3C1F1E7F6B00136B5F /* NYTPhotoViewer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NYTPhotoViewer.framework; path = Carthage/Build/iOS/NYTPhotoViewer.framework; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -319,6 +336,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364DEE3A1F1E7F2000136B5F /* libMerryPhotoViewer.a in Frameworks */,
 				36AAC1ED1F18CAC5004BFDC1 /* libMerryToast.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
@@ -329,6 +347,8 @@
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
+				364DEE3D1F1E7F6B00136B5F /* FLAnimatedImage.framework in Frameworks */,
+				364DEE3F1F1E7F6B00136B5F /* NYTPhotoViewer.framework in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 			);
@@ -476,6 +496,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		364DEE171F1E7F1200136B5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				364DEE1B1F1E7F1200136B5F /* libMerryPhotoViewer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +525,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				364DEE161F1E7F1200136B5F /* MerryPhotoViewer.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -525,6 +554,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				364DEE3B1F1E7F6B00136B5F /* FLAnimatedImage.framework */,
+				364DEE3C1F1E7F6B00136B5F /* NYTPhotoViewer.framework */,
 				13B07FAE1A68108700A75B9A /* MerryExamples */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* MerryExamplesTests */,
@@ -664,6 +695,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 364DEE171F1E7F1200136B5F /* Products */;
+					ProjectRef = 364DEE161F1E7F1200136B5F /* MerryPhotoViewer.xcodeproj */;
+				},
+				{
 					ProductGroup = 361F8A631F17F2CD007B71D3 /* Products */;
 					ProjectRef = 8C0AA03C592F4A73A94788A3 /* MerryToast.xcodeproj */;
 				},
@@ -784,6 +819,13 @@
 			fileType = archive.ar;
 			path = libMerryToast.a;
 			remoteRef = 361F8A661F17F2CD007B71D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		364DEE1B1F1E7F1200136B5F /* libMerryPhotoViewer.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMerryPhotoViewer.a;
+			remoteRef = 364DEE1A1F1E7F1200136B5F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		36F1FDF21F17B7C4001EDD87 /* libthird-party.a */ = {
@@ -1129,6 +1171,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1159,6 +1202,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

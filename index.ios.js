@@ -5,7 +5,15 @@
  */
 
 import React, { Component } from "react";
-import { AppRegistry, StyleSheet, Text, View, Button } from "react-native";
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Image,
+  TouchableOpacity
+} from "react-native";
 import Toast from "@merryjs/toast";
 console.log(Toast);
 // import PhotoViewer from '@merryjs/photo-viewer'
@@ -16,7 +24,7 @@ const { MerryPhotoViewer } = NativeModules;
 const cats = [
   "https://c1.staticflickr.com/8/7625/16631849053_db25684173_k.jpg",
   "https://c1.staticflickr.com/6/5598/14934282524_577a904d2b_k.jpg",
-  'https://c1.staticflickr.com/8/7596/17021131801_fbd8f2b71a_k.jpg'
+  "https://c1.staticflickr.com/8/7596/17021131801_fbd8f2b71a_k.jpg"
 ];
 export default class MerryExamples extends Component {
   render() {
@@ -39,11 +47,23 @@ export default class MerryExamples extends Component {
           onPress={() =>
             Toast.showWithGravity("A merry toast", Toast.SHORT, Toast.CENTER)}
         />
-        <Button
-          title="show images"
-          onPress={() =>
-            MerryPhotoViewer.show(cats)}
-        />
+        <View
+          style={{
+            flex: 1
+          }}
+        >
+          {cats.map((cat, index) =>
+            <TouchableOpacity
+              key={cat}
+              onPress={() => MerryPhotoViewer.show(cats, index)}
+            >
+              <Image
+                style={{ width: 200, height: 200 }}
+                source={{ uri: cat }}
+              />
+            </TouchableOpacity>
+          )}
+        </View>
       </View>
     );
   }

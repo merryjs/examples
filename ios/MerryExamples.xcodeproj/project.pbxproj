@@ -38,6 +38,7 @@
 		364DEEA01F1EF42F00136B5F /* FLAnimatedImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 364DEE9D1F1EF42F00136B5F /* FLAnimatedImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		364DEEA11F1EF42F00136B5F /* NYTPhotoViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364DEE9E1F1EF42F00136B5F /* NYTPhotoViewer.framework */; };
 		364DEEA21F1EF42F00136B5F /* NYTPhotoViewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 364DEE9E1F1EF42F00136B5F /* NYTPhotoViewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		364DEEB11F1EF5D400136B5F /* libMerryPhotoViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 364DEE9C1F1EF40D00136B5F /* libMerryPhotoViewer.a */; };
 		36AAC1ED1F18CAC5004BFDC1 /* libMerryToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 361F8A671F17F2CD007B71D3 /* libMerryToast.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -335,6 +336,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364DEEB11F1EF5D400136B5F /* libMerryPhotoViewer.a in Frameworks */,
 				36AAC1ED1F18CAC5004BFDC1 /* libMerryToast.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,

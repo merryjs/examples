@@ -33,7 +33,7 @@ const photos = [
 ];
 export default class MerryExamples extends Component {
   async componentDidMount() {
-    await MerryPhotoViewer.config({ photos });
+    await MerryPhotoViewer.config({ data: photos });
   }
   render() {
     return (

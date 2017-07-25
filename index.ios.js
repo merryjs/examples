@@ -22,17 +22,19 @@ console.log(Toast);
 import { NativeModules } from "react-native";
 
 const { MerryPhotoViewer } = NativeModules;
-const cats = [
+const photos = [
   "https://c1.staticflickr.com/8/7625/16631849053_db25684173_k.jpg",
   "https://c1.staticflickr.com/6/5598/14934282524_577a904d2b_k.jpg",
   "https://c1.staticflickr.com/8/7596/17021131801_fbd8f2b71a_k.jpg",
   "https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
   "https://images.pexels.com/photos/142615/pexels-photo-142615.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
-	"https://images.pexels.com/photos/82072/cat-82072.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
-	"https://img.buzzfeed.com/buzzfeed-static/static/2014-07/18/8/enhanced/webdr08/anigif_enhanced-buzz-8915-1405685312-10.gif?downsize=715:*&output-format=auto&output-quality=auto"
-  // "https://images.pexels.com/photos/248261/pexels-photo-248261.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+  "https://images.pexels.com/photos/82072/cat-82072.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
+  "https://images.pexels.com/photos/248261/pexels-photo-248261.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 ];
 export default class MerryExamples extends Component {
+  async componentDidMount() {
+    await MerryPhotoViewer.config({ photos });
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -57,7 +59,7 @@ export default class MerryExamples extends Component {
             flexWrap: "wrap"
           }}
         >
-          {cats.map((cat, index) =>
+          {photos.map((cat, index) =>
             <TouchableOpacity
               key={cat}
               style={{
@@ -65,12 +67,7 @@ export default class MerryExamples extends Component {
                 height: 200
               }}
               ref={r => (this.r = r)}
-              onPress={() =>
-                MerryPhotoViewer.show({
-                  photos: cats,
-                  initial: index,
-                  //ref: this.r
-                })}
+              onPress={() => MerryPhotoViewer.show(index)}
             >
               <Image
                 style={{ width: 200, height: 200 }}

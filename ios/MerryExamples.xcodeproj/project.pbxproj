@@ -40,10 +40,10 @@
 		362819591F23C6DD00DD3CE1 /* NYTPhotoViewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 362819511F23AB7800DD3CE1 /* NYTPhotoViewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3628195B1F2460F700DD3CE1 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3628195A1F2460F700DD3CE1 /* SDWebImage.framework */; };
 		3628195C1F2460F700DD3CE1 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3628195A1F2460F700DD3CE1 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		364DEEB11F1EF5D400136B5F /* libMerryPhotoViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 364DEE9C1F1EF40D00136B5F /* libMerryPhotoViewer.a */; };
 		36AAC1ED1F18CAC5004BFDC1 /* libMerryToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 361F8A671F17F2CD007B71D3 /* libMerryToast.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		AD84E00586354164B2F8C7D9 /* libMerryPhotoViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 710EFC4A8DF44D5FBF665A2B /* libMerryPhotoViewer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,9 +124,9 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = MerryToast;
 		};
-		364DEE9B1F1EF40D00136B5F /* PBXContainerItemProxy */ = {
+		36281A9C1F279E9600DD3CE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 364DEE971F1EF40C00136B5F /* MerryPhotoViewer.xcodeproj */;
+			containerPortal = 8771EFFA4B8D46E2A9D1B7D1 /* MerryPhotoViewer.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = MerryPhotoViewer;
@@ -320,10 +320,11 @@
 		362819501F23AB7800DD3CE1 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = Carthage/Build/iOS/FLAnimatedImage.framework; sourceTree = "<group>"; };
 		362819511F23AB7800DD3CE1 /* NYTPhotoViewer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NYTPhotoViewer.framework; path = Carthage/Build/iOS/NYTPhotoViewer.framework; sourceTree = "<group>"; };
 		3628195A1F2460F700DD3CE1 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
-		364DEE971F1EF40C00136B5F /* MerryPhotoViewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MerryPhotoViewer.xcodeproj; path = "../../photo-viewer/ios/MerryPhotoViewer.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		710EFC4A8DF44D5FBF665A2B /* libMerryPhotoViewer.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libMerryPhotoViewer.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8771EFFA4B8D46E2A9D1B7D1 /* MerryPhotoViewer.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = MerryPhotoViewer.xcodeproj; path = "../node_modules/@merryjs/photo-viewer/ios/MerryPhotoViewer.xcodeproj"; sourceTree = "<group>"; };
 		8C0AA03C592F4A73A94788A3 /* MerryToast.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = MerryToast.xcodeproj; path = "../node_modules/@merryjs/toast/ios/MerryToast.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -340,7 +341,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				364DEEB11F1EF5D400136B5F /* libMerryPhotoViewer.a in Frameworks */,
 				36AAC1ED1F18CAC5004BFDC1 /* libMerryToast.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
@@ -356,6 +356,7 @@
 				362819581F23C6DD00DD3CE1 /* NYTPhotoViewer.framework in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				AD84E00586354164B2F8C7D9 /* libMerryPhotoViewer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,10 +502,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		364DEE981F1EF40C00136B5F /* Products */ = {
+		36281A991F279E9600DD3CE1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				364DEE9C1F1EF40D00136B5F /* libMerryPhotoViewer.a */,
+				36281A9D1F279E9600DD3CE1 /* libMerryPhotoViewer.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -530,7 +531,6 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				364DEE971F1EF40C00136B5F /* MerryPhotoViewer.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -543,6 +543,7 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				8C0AA03C592F4A73A94788A3 /* MerryToast.xcodeproj */,
+				8771EFFA4B8D46E2A9D1B7D1 /* MerryPhotoViewer.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -701,8 +702,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 364DEE981F1EF40C00136B5F /* Products */;
-					ProjectRef = 364DEE971F1EF40C00136B5F /* MerryPhotoViewer.xcodeproj */;
+					ProductGroup = 36281A991F279E9600DD3CE1 /* Products */;
+					ProjectRef = 8771EFFA4B8D46E2A9D1B7D1 /* MerryPhotoViewer.xcodeproj */;
 				},
 				{
 					ProductGroup = 361F8A631F17F2CD007B71D3 /* Products */;
@@ -827,11 +828,11 @@
 			remoteRef = 361F8A661F17F2CD007B71D3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		364DEE9C1F1EF40D00136B5F /* libMerryPhotoViewer.a */ = {
+		36281A9D1F279E9600DD3CE1 /* libMerryPhotoViewer.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libMerryPhotoViewer.a;
-			remoteRef = 364DEE9B1F1EF40D00136B5F /* PBXContainerItemProxy */;
+			remoteRef = 36281A9C1F279E9600DD3CE1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		36F1FDF21F17B7C4001EDD87 /* libthird-party.a */ = {
@@ -1124,11 +1125,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
+					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 				);
 				INFOPLIST_FILE = MerryExamplesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1150,11 +1155,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
+					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 				);
 				INFOPLIST_FILE = MerryExamplesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1182,6 +1191,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
+					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 				);
 				INFOPLIST_FILE = MerryExamples/Info.plist;
@@ -1214,6 +1224,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
 					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
+					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 				);
 				INFOPLIST_FILE = MerryExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1244,10 +1255,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
+					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 				);
 				INFOPLIST_FILE = "MerryExamples-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1275,10 +1290,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
+					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 				);
 				INFOPLIST_FILE = "MerryExamples-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1304,7 +1323,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "MerryExamples-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.MerryExamples-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1326,7 +1348,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "MerryExamples-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.MerryExamples-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;

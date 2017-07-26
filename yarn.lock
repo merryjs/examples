@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@merryjs/photo-viewer@^1.0.0-alpha.3":
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@merryjs/photo-viewer/-/photo-viewer-1.0.0-alpha.3.tgz#288f3de1cb69414018b58615b411d48687fbec8b"
+
 "@merryjs/toast@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@merryjs/toast/-/toast-1.0.1.tgz#2e984a73134718db8bef649aac6a2822efa145e4"

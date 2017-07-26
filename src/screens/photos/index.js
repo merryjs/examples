@@ -7,7 +7,8 @@ import {
   View,
   Button,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  Dimensions
 } from "react-native";
 
 // import PhotoViewer from '@merryjs/photo-viewer'
@@ -33,34 +34,33 @@ export default class Photos extends Component {
     await MerryPhotoViewer.config({ data: photos });
   }
   render() {
+    const imageSize = Dimensions.get("window").width / 3;
+
+    const imageStyle = {
+      width: imageSize,
+      height: imageSize
+    };
+
     return (
       <View style={styles.container}>
-        <ScrollView
-          style={{}}
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{
-            justifyContent: "center",
-            flex: 1,
-            flexDirection: "row",
-            flexWrap: "wrap"
-          }}
-        >
-          {photos.map((cat, index) =>
-            <TouchableOpacity
-              key={cat}
-              style={{
-                width: 200,
-                height: 200
-              }}
-              ref={r => (this.r = r)}
-              onPress={() => MerryPhotoViewer.show(index)}
-            >
-              <Image
-                style={{ width: 200, height: 200 }}
-                source={{ uri: cat }}
-              />
-            </TouchableOpacity>
-          )}
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={styles.photoContainer}>
+            {photos.map((cat, index) =>
+              <TouchableOpacity
+                key={cat}
+                style={[
+                  imageStyle,
+                  {
+
+                  }
+                ]}
+                ref={r => (this.r = r)}
+                onPress={() => MerryPhotoViewer.show(index)}
+              >
+                <Image style={imageStyle} source={{ uri: cat }} />
+              </TouchableOpacity>
+            )}
+          </View>
         </ScrollView>
       </View>
     );
@@ -69,17 +69,13 @@ export default class Photos extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    flexGrow: 1,
+    backgroundColor: "#f5fcff"
+  },
+  photoContainer: {
     flex: 1,
-    backgroundColor: "#F5FCFF"
+    flexDirection: "row",
+    flexWrap: "wrap"
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10
-  },
-  instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5
-  }
+  button: {}
 });

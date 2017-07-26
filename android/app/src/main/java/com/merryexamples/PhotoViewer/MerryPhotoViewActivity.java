@@ -35,23 +35,22 @@ public class MerryPhotoViewActivity extends AppCompatActivity {
         options = new Gson().fromJson(o, MerryPhotoViewOptions.class);
 
         if (options != null) {
-
             //The key argument here must match that used in the other activity
             showPicker(options);
         }
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+//
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
 //        getMenuInflater().inflate(R.menu.styling_options_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-//        options.showDialog(this);
-        return super.onOptionsItemSelected(item);
-    }
+//        return super.onCreateOptionsMenu(menu);
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+////        options.showDialog(this);
+//        return super.onOptionsItemSelected(item);
+//    }
 
     protected void showPicker(MerryPhotoViewOptions merryPhotoViewOptions) {
 
@@ -63,10 +62,9 @@ public class MerryPhotoViewActivity extends AppCompatActivity {
                         return o.url;
                     }
                 })
-                .hideStatusBar(false)
+                .hideStatusBar(merryPhotoViewOptions.hideStatusBar)
                 .setOnDismissListener(getDismissListener());
 //
-//        builder.hideStatusBar(options.get(MerryPhotoViewOptions.Property.HIDE_STATUS_BAR));
 //
 //        if (options.get(MerryPhotoViewOptions.Property.IMAGE_MARGIN)) {
 //            builder.setImageMargin(this, R.dimen.image_margin);
@@ -80,19 +78,17 @@ public class MerryPhotoViewActivity extends AppCompatActivity {
 //            builder.setCustomDraweeHierarchyBuilder(getRoundedHierarchyBuilder());
 //        }
 //
-//        builder.allowSwipeToDismiss(options.get(MerryPhotoViewOptions.Property.SWIPE_TO_DISMISS));
+        builder.allowSwipeToDismiss(merryPhotoViewOptions.swipeToDismiss);
 //
-//        builder.allowZooming(options.get(MerryPhotoViewOptions.Property.ZOOMING));
+        builder.allowZooming(merryPhotoViewOptions.zooming);
 //
-//        if (options.get(MerryPhotoViewOptions.Property.SHOW_OVERLAY)) {
-//            overlayView = new ImageOverlayView(this);
-//            builder.setOverlayView(overlayView);
-//            builder.setImageChangeListener(getImageChangeListener());
-//        }
+        overlayView = new MerryPhotoOverlay(this);
+        builder.setOverlayView(overlayView);
+        builder.setImageChangeListener(getImageChangeListener());
 //
-//        if (options.get(MerryPhotoViewOptions.Property.RANDOM_BACKGROUND)) {
-//            builder.setBackgroundColor(getRandomColor());
-//        }
+        if (options.backgroundColor != null) {
+            builder.setBackgroundColor(Color.parseColor(options.backgroundColor));
+        }
 //
 //        if (options.get(MerryPhotoViewOptions.Property.POST_PROCESSING)) {
 //            builder.setCustomImageRequestBuilder(
@@ -103,25 +99,42 @@ public class MerryPhotoViewActivity extends AppCompatActivity {
         builder.show();
     }
 
+
+    private ImageViewer.OnImageChangeListener getImageChangeListener() {
+        return new ImageViewer.OnImageChangeListener() {
+            @Override
+            public void onImageChange(int position) {
+                MerryPhotoData merryPhotoData = options.data[position];
+                String url = merryPhotoData.url;
+                overlayView.setShareText(url);
+                overlayView.setDescription(merryPhotoData.summary);
+
+                if (options.titlePagerColor != null) {
+                    overlayView.setPagerTextColor(options.titlePagerColor);
+                }
+
+                overlayView.setPagerText((position + 1) + " / " + options.data.length);
+
+                if (options.titleColor != null) {
+                    overlayView.setTitleTextColor(options.titleColor);
+                }
+                if (options.summaryColor != null) {
+                    overlayView.setDescriptionTextColor(options.summaryColor);
+                }
+                if (options.shareTextColor != null) {
+                    overlayView.setShareTextColor(options.shareTextColor);
+                }
+            }
+        };
+    }
+
     //
-//    private ImageViewer.OnImageChangeListener getImageChangeListener() {
-//        return new ImageViewer.OnImageChangeListener() {
-//            @Override
-//            public void onImageChange(int position) {
-//                String url = posters[position];
-//                overlayView.setShareText(url);
-//                overlayView.setDescription(descriptions[position]);
-//            }
-//        };
-//    }
-//
     private ImageViewer.OnDismissListener getDismissListener() {
         return new ImageViewer.OnDismissListener() {
             @Override
             public void onDismiss() {
                 mActivity.finish();
-//                AppUtils.showInfoSnackbar(findViewById(R.id.coordinator),
-//                        R.string.message_on_dismiss, false);
+
             }
         };
     }
@@ -133,9 +146,9 @@ public class MerryPhotoViewActivity extends AppCompatActivity {
         return GenericDraweeHierarchyBuilder.newInstance(getResources())
                 .setRoundingParams(roundingParams);
     }
-
-    private int getRandomColor() {
-        Random random = new Random();
-        return Color.argb(255, random.nextInt(156), random.nextInt(156), random.nextInt(156));
-    }
+//
+//    private int getRandomColor() {
+//        Random random = new Random();
+//        return Color.argb(255, random.nextInt(156), random.nextInt(156), random.nextInt(156));
+//    }
 }

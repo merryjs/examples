@@ -2,6 +2,7 @@ package com.merryexamples.PhotoViewer;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -14,8 +15,11 @@ import com.merryexamples.R;
  */
 
 public class MerryPhotoOverlay extends RelativeLayout {
-    private TextView tvDescription;
+    private TextView tvTitle;
+    private TextView tvTitlePager;
 
+    private TextView tvDescription;
+    private TextView tvShare;
     private String sharingText;
 
     public MerryPhotoOverlay(Context context) {
@@ -33,14 +37,32 @@ public class MerryPhotoOverlay extends RelativeLayout {
         init();
     }
 
+    public void setPagerText(String text) {
+        tvTitlePager.setText(text);
+    }
+
+    public void setPagerTextColor(String color) {
+        tvTitlePager.setTextColor(Color.parseColor(color));
+    }
+
     public void setDescription(String description) {
         tvDescription.setText(description);
+    }
+
+    public void setDescriptionTextColor(String color) {
+        tvDescription.setTextColor(Color.parseColor(color));
     }
 
     public void setShareText(String text) {
         this.sharingText = text;
     }
 
+    public void setShareTextColor(String color) {
+        tvShare.setTextColor(Color.parseColor(color));
+    }
+    public void setTitleTextColor(String color) {
+        tvTitle.setTextColor(Color.parseColor(color));
+    }
     private void sendShareIntent() {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
@@ -51,8 +73,13 @@ public class MerryPhotoOverlay extends RelativeLayout {
 
     private void init() {
         View view = inflate(getContext(), R.layout.photo_viewer_overlay, this);
+
+        tvTitlePager = (TextView) view.findViewById(R.id.tvTitlePager);
+        tvTitle = (TextView) view.findViewById(R.id.tvTitle);
         tvDescription = (TextView) view.findViewById(R.id.tvDescription);
-        view.findViewById(R.id.btnShare).setOnClickListener(new OnClickListener() {
+
+        tvShare = (TextView) view.findViewById(R.id.btnShare);
+        tvShare.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 sendShareIntent();

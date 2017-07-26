@@ -5,7 +5,13 @@ import java.io.Serializable;
 public class MerryPhotoViewOptions {
 
     public MerryPhotoData[] data;
+    public String titlePagerColor;
     public String titleColor;
     public String summaryColor;
+    public String shareTextColor;
+    public String backgroundColor;
     public int initial;
+    public boolean hideStatusBar;
+    public boolean swipeToDismiss;
+    public boolean zooming;
 }

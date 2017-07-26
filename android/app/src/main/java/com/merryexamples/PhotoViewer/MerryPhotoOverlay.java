@@ -1,4 +1,4 @@
-package com.merryexamples.merryphotoviewer;
+package com.merryexamples.PhotoViewer;
 
 import android.content.Context;
 import android.content.Intent;

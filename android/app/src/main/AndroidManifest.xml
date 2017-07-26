@@ -28,7 +28,7 @@
         </activity>
         <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
         <activity
-            android:name=".merryphotoviewer.MerryPhotoViewActivity"
+            android:name=".PhotoViewer.MerryPhotoViewActivity"
             android:theme="@style/Theme.Transparent" />
     </application>
 

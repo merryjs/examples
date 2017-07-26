@@ -1,18 +1,21 @@
 //  Created by react-native-create-bridge
 
-package com.merryexamples.merryphotoviewer;
+package com.merryexamples.PhotoViewer;
 
 import android.content.Intent;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.ReadableArray;
+import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
-import com.merryexamples.MainActivity;
-import com.stfalcon.frescoimageviewer.ImageViewer;
+import com.google.gson.Gson;
+
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,6 +23,10 @@ import java.util.Map;
 public class MerryPhotoViewerModule extends ReactContextBaseJavaModule {
     public static final String REACT_CLASS = "MerryPhotoViewer";
     private static ReactApplicationContext reactContext = null;
+
+    private Intent mIntent;
+    private int PHOTO_VIEWER_CODE = 1;
+    private MerryPhotoViewOptions merryPhotoViewOptions;
 
     public MerryPhotoViewerModule(ReactApplicationContext context) {
         // Pass in the context to the constructor and save it so you can emit events
@@ -47,25 +54,34 @@ public class MerryPhotoViewerModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void exampleMethod() {
+    public void show(ReadableMap options) {
         // An example native method that you will expose to React
         // https://facebook.github.io/react-native/docs/native-modules-android.html#the-toast-module
 
-        String[] photos = new String[]{
-                "https://c1.staticflickr.com/8/7625/16631849053_db25684173_k.jpg",
-                "https://c1.staticflickr.com/6/5598/14934282524_577a904d2b_k.jpg",
-                "https://c1.staticflickr.com/8/7596/17021131801_fbd8f2b71a_k.jpg",
-                "https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
-                "https://images.pexels.com/photos/142615/pexels-photo-142615.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
-                "https://images.pexels.com/photos/82072/cat-82072.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
-                "https://images.pexels.com/photos/248261/pexels-photo-248261.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
-        };
-        Intent mIntent = new Intent(reactContext.getCurrentActivity(), MerryPhotoViewActivity.class);
-        mIntent.putExtra("startPosition", 0);
-        mIntent.putExtra("data", photos);
 
-        reactContext.getCurrentActivity().startActivity(mIntent);
+        mIntent = new Intent(reactContext.getCurrentActivity(), MerryPhotoViewActivity.class);
 
+        JSONObject jsonObject = Utils.readableMapToJson(options);
+        if (jsonObject != null) {
+
+//            merryPhotoViewOptions = new Gson().fromJson(jsonObject.toString(), MerryPhotoViewOptions.class);
+
+
+            if (reactContext.getCurrentActivity() != null) {
+
+                mIntent.putExtra("options", jsonObject.toString());
+
+                reactContext.getCurrentActivity().startActivityForResult(mIntent, PHOTO_VIEWER_CODE);
+            }
+
+        }
+    }
+
+    @ReactMethod
+    public void hide() {
+        if (mIntent != null && reactContext.getCurrentActivity() != null) {
+            reactContext.getCurrentActivity().finishActivity(PHOTO_VIEWER_CODE);
+        }
     }
 
     private static void emitDeviceEvent(String eventName, @Nullable WritableMap eventData) {

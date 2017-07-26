@@ -1,13 +1,15 @@
 //  Created by react-native-create-bridge
 
-import { NativeModules } from 'react-native'
+import { NativeModules } from "react-native";
 
-const { MerryPhotoViewer } = NativeModules
+const { MerryPhotoViewer } = NativeModules;
 
 export default {
-  show () {
-    return MerryPhotoViewer.exampleMethod()
+  show(options) {
+    return MerryPhotoViewer.show(options);
   },
-
+  hide() {
+    return MerryPhotoViewer.hide();
+  },
   EXAMPLE_CONSTANT: MerryPhotoViewer.EXAMPLE_CONSTANT
-}
+};

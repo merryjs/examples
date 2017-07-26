@@ -1,6 +1,6 @@
 //  Created by react-native-create-bridge
 
-package com.merryexamples.merryphotoviewer;
+package com.merryexamples.PhotoViewer;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;

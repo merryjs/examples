@@ -1,4 +1,4 @@
-package com.merryexamples.merryphotoviewer;
+package com.merryexamples.PhotoViewer;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
 import com.facebook.drawee.generic.RoundingParams;
+import com.google.gson.Gson;
 import com.merryexamples.R;
 import com.stfalcon.frescoimageviewer.ImageViewer;
 
@@ -21,20 +22,22 @@ import java.util.Random;
 
 public class MerryPhotoViewActivity extends AppCompatActivity {
     private MerryPhotoOverlay overlayView;
-    private StylingOptions options;
+    private MerryPhotoViewOptions options;
     private Activity mActivity;
-    
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActivity = this;
         setContentView(R.layout.merry_photo_activity);
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            int value = extras.getInt("startPosition");
-            String[] data = extras.getStringArray("data");
+
+        String o = getIntent().getStringExtra("options");
+        options = new Gson().fromJson(o, MerryPhotoViewOptions.class);
+
+        if (options != null) {
+
             //The key argument here must match that used in the other activity
-            showPicker(value, data);
+            showPicker(options);
         }
     }
 
@@ -50,41 +53,48 @@ public class MerryPhotoViewActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    protected void showPicker(int startPosition, String[] posters) {
-        ImageViewer.Builder builder = new ImageViewer.Builder(this, posters)
-                .setStartPosition(startPosition)
+    protected void showPicker(MerryPhotoViewOptions merryPhotoViewOptions) {
+
+        ImageViewer.Builder builder = new ImageViewer.Builder(this, merryPhotoViewOptions.data)
+                .setStartPosition(merryPhotoViewOptions.initial)
+                .setFormatter(new ImageViewer.Formatter<MerryPhotoData>() {
+                    @Override
+                    public String format(MerryPhotoData o) {
+                        return o.url;
+                    }
+                })
                 .hideStatusBar(false)
                 .setOnDismissListener(getDismissListener());
 //
-//        builder.hideStatusBar(options.get(StylingOptions.Property.HIDE_STATUS_BAR));
+//        builder.hideStatusBar(options.get(MerryPhotoViewOptions.Property.HIDE_STATUS_BAR));
 //
-//        if (options.get(StylingOptions.Property.IMAGE_MARGIN)) {
+//        if (options.get(MerryPhotoViewOptions.Property.IMAGE_MARGIN)) {
 //            builder.setImageMargin(this, R.dimen.image_margin);
 //        }
 //
-//        if (options.get(StylingOptions.Property.CONTAINER_PADDING)) {
+//        if (options.get(MerryPhotoViewOptions.Property.CONTAINER_PADDING)) {
 //            builder.setContainerPadding(this, R.dimen.image_margin);
 //        }
 //
-//        if (options.get(StylingOptions.Property.IMAGES_ROUNDING)) {
+//        if (options.get(MerryPhotoViewOptions.Property.IMAGES_ROUNDING)) {
 //            builder.setCustomDraweeHierarchyBuilder(getRoundedHierarchyBuilder());
 //        }
 //
-//        builder.allowSwipeToDismiss(options.get(StylingOptions.Property.SWIPE_TO_DISMISS));
+//        builder.allowSwipeToDismiss(options.get(MerryPhotoViewOptions.Property.SWIPE_TO_DISMISS));
 //
-//        builder.allowZooming(options.get(StylingOptions.Property.ZOOMING));
+//        builder.allowZooming(options.get(MerryPhotoViewOptions.Property.ZOOMING));
 //
-//        if (options.get(StylingOptions.Property.SHOW_OVERLAY)) {
+//        if (options.get(MerryPhotoViewOptions.Property.SHOW_OVERLAY)) {
 //            overlayView = new ImageOverlayView(this);
 //            builder.setOverlayView(overlayView);
 //            builder.setImageChangeListener(getImageChangeListener());
 //        }
 //
-//        if (options.get(StylingOptions.Property.RANDOM_BACKGROUND)) {
+//        if (options.get(MerryPhotoViewOptions.Property.RANDOM_BACKGROUND)) {
 //            builder.setBackgroundColor(getRandomColor());
 //        }
 //
-//        if (options.get(StylingOptions.Property.POST_PROCESSING)) {
+//        if (options.get(MerryPhotoViewOptions.Property.POST_PROCESSING)) {
 //            builder.setCustomImageRequestBuilder(
 //                    ImageViewer.createImageRequestBuilder()
 //                            .setPostprocessor(new GrayscalePostprocessor()));

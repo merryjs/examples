@@ -44,6 +44,7 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		AD84E00586354164B2F8C7D9 /* libMerryPhotoViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 710EFC4A8DF44D5FBF665A2B /* libMerryPhotoViewer.a */; };
+		B2CABA1AE0274CAE81CD73F3 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 418DDE636B16451D896043C9 /* libReactNativeNavigation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = MerryPhotoViewer;
+		};
+		36281AEC1F282E8300DD3CE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98974EB77EF04C168B8EB63A /* ReactNativeNavigation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D8AFADBD1BEE6F3F00A4592D;
+			remoteInfo = ReactNativeNavigation;
+		};
+		36281AEE1F282E8300DD3CE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98974EB77EF04C168B8EB63A /* ReactNativeNavigation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7B49FEBB1E95090800DEB3EA;
+			remoteInfo = ReactNativeNavigationTests;
 		};
 		36F1FDF11F17B7C4001EDD87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -320,12 +335,14 @@
 		362819501F23AB7800DD3CE1 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = Carthage/Build/iOS/FLAnimatedImage.framework; sourceTree = "<group>"; };
 		362819511F23AB7800DD3CE1 /* NYTPhotoViewer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NYTPhotoViewer.framework; path = Carthage/Build/iOS/NYTPhotoViewer.framework; sourceTree = "<group>"; };
 		3628195A1F2460F700DD3CE1 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		418DDE636B16451D896043C9 /* libReactNativeNavigation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativeNavigation.a; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		710EFC4A8DF44D5FBF665A2B /* libMerryPhotoViewer.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libMerryPhotoViewer.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8771EFFA4B8D46E2A9D1B7D1 /* MerryPhotoViewer.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = MerryPhotoViewer.xcodeproj; path = "../node_modules/@merryjs/photo-viewer/ios/MerryPhotoViewer.xcodeproj"; sourceTree = "<group>"; };
 		8C0AA03C592F4A73A94788A3 /* MerryToast.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = MerryToast.xcodeproj; path = "../node_modules/@merryjs/toast/ios/MerryToast.xcodeproj"; sourceTree = "<group>"; };
+		98974EB77EF04C168B8EB63A /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/lib/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +374,7 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				AD84E00586354164B2F8C7D9 /* libMerryPhotoViewer.a in Frameworks */,
+				B2CABA1AE0274CAE81CD73F3 /* libReactNativeNavigation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +528,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		36281AC91F282E8300DD3CE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36281AED1F282E8300DD3CE1 /* libReactNativeNavigation.a */,
+				36281AEF1F282E8300DD3CE1 /* ReactNativeNavigationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +571,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				8C0AA03C592F4A73A94788A3 /* MerryToast.xcodeproj */,
 				8771EFFA4B8D46E2A9D1B7D1 /* MerryPhotoViewer.xcodeproj */,
+				98974EB77EF04C168B8EB63A /* ReactNativeNavigation.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -753,6 +781,10 @@
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
+				{
+					ProductGroup = 36281AC91F282E8300DD3CE1 /* Products */;
+					ProjectRef = 98974EB77EF04C168B8EB63A /* ReactNativeNavigation.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -833,6 +865,20 @@
 			fileType = archive.ar;
 			path = libMerryPhotoViewer.a;
 			remoteRef = 36281A9C1F279E9600DD3CE1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		36281AED1F282E8300DD3CE1 /* libReactNativeNavigation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeNavigation.a;
+			remoteRef = 36281AEC1F282E8300DD3CE1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		36281AEF1F282E8300DD3CE1 /* ReactNativeNavigationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactNativeNavigationTests.xctest;
+			remoteRef = 36281AEE1F282E8300DD3CE1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		36F1FDF21F17B7C4001EDD87 /* libthird-party.a */ = {
@@ -1126,12 +1172,14 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
 					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 				INFOPLIST_FILE = MerryExamplesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1156,12 +1204,14 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
 					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 				INFOPLIST_FILE = MerryExamplesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1193,6 +1243,7 @@
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
 					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 				INFOPLIST_FILE = MerryExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1225,6 +1276,7 @@
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
 					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 				INFOPLIST_FILE = MerryExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1256,11 +1308,13 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
 					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 				INFOPLIST_FILE = "MerryExamples-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1291,11 +1345,13 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
 					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
 				);
 				INFOPLIST_FILE = "MerryExamples-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1326,6 +1382,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.MerryExamples-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1350,6 +1407,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.MerryExamples-tvOSTests";

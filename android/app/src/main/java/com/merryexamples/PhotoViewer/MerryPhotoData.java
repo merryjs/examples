@@ -19,4 +19,6 @@ public class MerryPhotoData {
     public String url;
     public String title;
     public String summary;
+    public String titleColor;
+    public String summaryColor;
 }

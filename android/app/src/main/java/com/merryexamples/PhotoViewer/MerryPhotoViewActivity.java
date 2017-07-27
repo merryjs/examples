@@ -104,11 +104,16 @@ public class MerryPhotoViewActivity extends AppCompatActivity {
         return new ImageViewer.OnImageChangeListener() {
             @Override
             public void onImageChange(int position) {
+
                 MerryPhotoData merryPhotoData = options.data[position];
                 String url = merryPhotoData.url;
+
                 overlayView.setShareText(url);
                 overlayView.setDescription(merryPhotoData.summary);
                 overlayView.setTitleText(merryPhotoData.title);
+
+                String summaryColor = "#ffffff";
+                String titleColor = "#ffffff";
 
                 if (options.titlePagerColor != null) {
                     overlayView.setPagerTextColor(options.titlePagerColor);
@@ -116,12 +121,15 @@ public class MerryPhotoViewActivity extends AppCompatActivity {
 
                 overlayView.setPagerText((position + 1) + " / " + options.data.length);
 
-                if (options.titleColor != null) {
-                    overlayView.setTitleTextColor(options.titleColor);
+                if (merryPhotoData.titleColor != null) {
+                    titleColor = merryPhotoData.titleColor;
                 }
-                if (options.summaryColor != null) {
-                    overlayView.setDescriptionTextColor(options.summaryColor);
+                overlayView.setTitleTextColor(titleColor);
+                if (merryPhotoData.summaryColor != null) {
+                    summaryColor = merryPhotoData.summaryColor;
                 }
+                overlayView.setDescriptionTextColor(summaryColor);
+
                 if (options.shareTextColor != null) {
                     overlayView.setShareTextColor(options.shareTextColor);
                 }

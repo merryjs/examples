@@ -14,7 +14,7 @@ import {
 // import PhotoViewer from '@merryjs/photo-viewer'
 // console.log(PhotoViewer)
 import { NativeModules } from "react-native";
-
+debugger
 const { MerryPhotoViewer } = NativeModules;
 const photos = [
   "https://c1.staticflickr.com/8/7625/16631849053_db25684173_k.jpg",
@@ -31,7 +31,7 @@ export default class Photos extends Component {
   };
 
   async componentDidMount() {
-    await MerryPhotoViewer.config({ data: photos });
+    // await MerryPhotoViewer.config({ data: photos });
   }
   render() {
     const imageSize = Dimensions.get("window").width / 3;
@@ -48,14 +48,9 @@ export default class Photos extends Component {
             {photos.map((cat, index) =>
               <TouchableOpacity
                 key={cat}
-                style={[
-                  imageStyle,
-                  {
-
-                  }
-                ]}
+                style={[imageStyle, {}]}
                 ref={r => (this.r = r)}
-                onPress={() => MerryPhotoViewer.show(index)}
+                onPress={() => MerryPhotoViewer.show({ data: photos })}
               >
                 <Image style={imageStyle} source={{ uri: cat }} />
               </TouchableOpacity>

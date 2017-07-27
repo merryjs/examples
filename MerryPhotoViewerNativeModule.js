@@ -11,5 +11,4 @@ export default {
   hide() {
     return MerryPhotoViewer.hide();
   },
-  EXAMPLE_CONSTANT: MerryPhotoViewer.EXAMPLE_CONSTANT
 };

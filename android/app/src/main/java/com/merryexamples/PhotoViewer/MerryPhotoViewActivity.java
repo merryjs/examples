@@ -108,6 +108,7 @@ public class MerryPhotoViewActivity extends AppCompatActivity {
                 String url = merryPhotoData.url;
                 overlayView.setShareText(url);
                 overlayView.setDescription(merryPhotoData.summary);
+                overlayView.setTitleText(merryPhotoData.title);
 
                 if (options.titlePagerColor != null) {
                     overlayView.setPagerTextColor(options.titlePagerColor);
@@ -138,14 +139,14 @@ public class MerryPhotoViewActivity extends AppCompatActivity {
             }
         };
     }
-
-    private GenericDraweeHierarchyBuilder getRoundedHierarchyBuilder() {
-        RoundingParams roundingParams = new RoundingParams();
-        roundingParams.setRoundAsCircle(true);
-
-        return GenericDraweeHierarchyBuilder.newInstance(getResources())
-                .setRoundingParams(roundingParams);
-    }
+//
+//    private GenericDraweeHierarchyBuilder getRoundedHierarchyBuilder() {
+//        RoundingParams roundingParams = new RoundingParams();
+//        roundingParams.setRoundAsCircle(true);
+//
+//        return GenericDraweeHierarchyBuilder.newInstance(getResources())
+//                .setRoundingParams(roundingParams);
+//    }
 //
 //    private int getRandomColor() {
 //        Random random = new Random();

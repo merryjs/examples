@@ -60,9 +60,15 @@ public class MerryPhotoOverlay extends RelativeLayout {
     public void setShareTextColor(String color) {
         tvShare.setTextColor(Color.parseColor(color));
     }
+
     public void setTitleTextColor(String color) {
         tvTitle.setTextColor(Color.parseColor(color));
     }
+
+    public void setTitleText(String text) {
+        tvTitle.setText(text);
+    }
+
     private void sendShareIntent() {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);

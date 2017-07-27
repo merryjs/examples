@@ -2,6 +2,7 @@
 
 package com.merryexamples.PhotoViewer;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.annotation.Nullable;
 
@@ -26,7 +27,10 @@ public class MerryPhotoViewerModule extends ReactContextBaseJavaModule {
 
     private Intent mIntent;
     private int PHOTO_VIEWER_CODE = 1;
-    private MerryPhotoViewOptions merryPhotoViewOptions;
+
+    private static final String E_ACTIVITY_DOES_NOT_EXIST = "E_ACTIVITY_DOES_NOT_EXIST";
+    private static final String E_INVALID_OPTIONS = "E_INVALID_OPTIONS";
+    private static final String E_FAILED_TO_SHOW_PHOTO_VIEWER = "FAILED_TO_SHOW_PHOTO_VIEWER";
 
     public MerryPhotoViewerModule(ReactApplicationContext context) {
         // Pass in the context to the constructor and save it so you can emit events
@@ -34,6 +38,7 @@ public class MerryPhotoViewerModule extends ReactContextBaseJavaModule {
         super(context);
 
         reactContext = context;
+
     }
 
     @Override
@@ -43,37 +48,29 @@ public class MerryPhotoViewerModule extends ReactContextBaseJavaModule {
         return REACT_CLASS;
     }
 
-    @Override
-    public Map<String, Object> getConstants() {
-        // Export any constants to be used in your native module
-        // https://facebook.github.io/react-native/docs/native-modules-android.html#the-toast-module
-        final Map<String, Object> constants = new HashMap<>();
-        constants.put("EXAMPLE_CONSTANT", "example");
-
-        return constants;
-    }
-
     @ReactMethod
-    public void show(ReadableMap options) {
-        // An example native method that you will expose to React
-        // https://facebook.github.io/react-native/docs/native-modules-android.html#the-toast-module
+    public void show(ReadableMap options, Promise promise) {
 
 
-        mIntent = new Intent(reactContext.getCurrentActivity(), MerryPhotoViewActivity.class);
+        Activity currentActivity = getCurrentActivity();
+        if (currentActivity == null) {
+            promise.reject(E_ACTIVITY_DOES_NOT_EXIST, "Activity doesn't exist");
+            return;
+        }
+
+        mIntent = new Intent(currentActivity, MerryPhotoViewActivity.class);
 
         JSONObject jsonObject = Utils.readableMapToJson(options);
-        if (jsonObject != null) {
 
-//            merryPhotoViewOptions = new Gson().fromJson(jsonObject.toString(), MerryPhotoViewOptions.class);
-
-
-            if (reactContext.getCurrentActivity() != null) {
-
-                mIntent.putExtra("options", jsonObject.toString());
-
-                reactContext.getCurrentActivity().startActivityForResult(mIntent, PHOTO_VIEWER_CODE);
-            }
-
+        if (jsonObject == null) {
+            promise.reject(E_INVALID_OPTIONS, "Invalid options, please check your configuration");
+            return;
+        }
+        try {
+            mIntent.putExtra("options", jsonObject.toString());
+            currentActivity.startActivityForResult(mIntent, PHOTO_VIEWER_CODE);
+        } catch (Exception e) {
+            promise.reject(E_FAILED_TO_SHOW_PHOTO_VIEWER, e);
         }
     }
 
@@ -84,9 +81,6 @@ public class MerryPhotoViewerModule extends ReactContextBaseJavaModule {
         }
     }
 
-    private static void emitDeviceEvent(String eventName, @Nullable WritableMap eventData) {
-        // A method for emitting from the native side to JS
-        // https://facebook.github.io/react-native/docs/native-modules-android.html#sending-events-to-javascript
-        reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, eventData);
-    }
+
+
 }

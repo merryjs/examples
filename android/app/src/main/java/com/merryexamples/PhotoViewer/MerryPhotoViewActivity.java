@@ -39,23 +39,23 @@ public class MerryPhotoViewActivity extends AppCompatActivity {
             showPicker(options);
         }
     }
-//
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.styling_options_menu, menu);
-//        return super.onCreateOptionsMenu(menu);
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-////        options.showDialog(this);
-//        return super.onOptionsItemSelected(item);
-//    }
 
     protected void showPicker(MerryPhotoViewOptions merryPhotoViewOptions) {
+        // catch exceptions
+        int startPosition = merryPhotoViewOptions.initial;
+
+        int total = merryPhotoViewOptions.data.length;
+
+        if (startPosition < 0) {
+            startPosition = 0;
+        }
+
+        if (startPosition >= total) {
+            startPosition = total;
+        }
 
         ImageViewer.Builder builder = new ImageViewer.Builder(this, merryPhotoViewOptions.data)
-                .setStartPosition(merryPhotoViewOptions.initial)
+                .setStartPosition(startPosition)
                 .setFormatter(new ImageViewer.Formatter<MerryPhotoData>() {
                     @Override
                     public String format(MerryPhotoData o) {

@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -43,8 +42,8 @@
 		36AAC1ED1F18CAC5004BFDC1 /* libMerryToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 361F8A671F17F2CD007B71D3 /* libMerryToast.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		AD84E00586354164B2F8C7D9 /* libMerryPhotoViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 710EFC4A8DF44D5FBF665A2B /* libMerryPhotoViewer.a */; };
 		B2CABA1AE0274CAE81CD73F3 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 418DDE636B16451D896043C9 /* libReactNativeNavigation.a */; };
+		FE790D8D9D1843BBB8FA9F7D /* libMerryPhotoViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D4CC26A6A14C47A74995B1 /* libMerryPhotoViewer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,13 +123,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = MerryToast;
-		};
-		36281A9C1F279E9600DD3CE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8771EFFA4B8D46E2A9D1B7D1 /* MerryPhotoViewer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = MerryPhotoViewer;
 		};
 		36281AEC1F282E8300DD3CE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -337,12 +329,12 @@
 		3628195A1F2460F700DD3CE1 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		418DDE636B16451D896043C9 /* libReactNativeNavigation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativeNavigation.a; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
-		710EFC4A8DF44D5FBF665A2B /* libMerryPhotoViewer.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libMerryPhotoViewer.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		8771EFFA4B8D46E2A9D1B7D1 /* MerryPhotoViewer.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = MerryPhotoViewer.xcodeproj; path = "../node_modules/@merryjs/photo-viewer/ios/MerryPhotoViewer.xcodeproj"; sourceTree = "<group>"; };
 		8C0AA03C592F4A73A94788A3 /* MerryToast.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = MerryToast.xcodeproj; path = "../node_modules/@merryjs/toast/ios/MerryToast.xcodeproj"; sourceTree = "<group>"; };
 		98974EB77EF04C168B8EB63A /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/lib/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
+		69163E79F290489884230CAF /* MerryPhotoViewer.xcodeproj */ = {isa = PBXFileReference; name = "MerryPhotoViewer.xcodeproj"; path = "../node_modules/@merryjs/photo-viewer/ios/MerryPhotoViewer.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		A1D4CC26A6A14C47A74995B1 /* libMerryPhotoViewer.a */ = {isa = PBXFileReference; name = "libMerryPhotoViewer.a"; path = "libMerryPhotoViewer.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,8 +365,8 @@
 				362819581F23C6DD00DD3CE1 /* NYTPhotoViewer.framework in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				AD84E00586354164B2F8C7D9 /* libMerryPhotoViewer.a in Frameworks */,
 				B2CABA1AE0274CAE81CD73F3 /* libReactNativeNavigation.a in Frameworks */,
+				FE790D8D9D1843BBB8FA9F7D /* libMerryPhotoViewer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,14 +512,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		36281A991F279E9600DD3CE1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				36281A9D1F279E9600DD3CE1 /* libMerryPhotoViewer.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		36281AC91F282E8300DD3CE1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -570,8 +554,8 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				8C0AA03C592F4A73A94788A3 /* MerryToast.xcodeproj */,
-				8771EFFA4B8D46E2A9D1B7D1 /* MerryPhotoViewer.xcodeproj */,
 				98974EB77EF04C168B8EB63A /* ReactNativeNavigation.xcodeproj */,
+				69163E79F290489884230CAF /* MerryPhotoViewer.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -730,10 +714,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 36281A991F279E9600DD3CE1 /* Products */;
-					ProjectRef = 8771EFFA4B8D46E2A9D1B7D1 /* MerryPhotoViewer.xcodeproj */;
-				},
-				{
 					ProductGroup = 361F8A631F17F2CD007B71D3 /* Products */;
 					ProjectRef = 8C0AA03C592F4A73A94788A3 /* MerryToast.xcodeproj */;
 				},
@@ -858,13 +838,6 @@
 			fileType = archive.ar;
 			path = libMerryToast.a;
 			remoteRef = 361F8A661F17F2CD007B71D3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		36281A9D1F279E9600DD3CE1 /* libMerryPhotoViewer.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libMerryPhotoViewer.a;
-			remoteRef = 36281A9C1F279E9600DD3CE1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		36281AED1F282E8300DD3CE1 /* libReactNativeNavigation.a */ = {
@@ -1171,15 +1144,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
-					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
+					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 				);
 				INFOPLIST_FILE = MerryExamplesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1203,15 +1175,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
-					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
+					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 				);
 				INFOPLIST_FILE = MerryExamplesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1241,9 +1212,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
-					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
-					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
+					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 				);
 				INFOPLIST_FILE = MerryExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1274,9 +1244,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
-					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
-					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
+					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 				);
 				INFOPLIST_FILE = MerryExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1307,14 +1276,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
-					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
+					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 				);
 				INFOPLIST_FILE = "MerryExamples-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1344,14 +1312,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@merryjs/toast/ios/**",
-					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios/**",
+					"$(SRCROOT)/../node_modules/@merryjs/photo-viewer/ios/**",
 				);
 				INFOPLIST_FILE = "MerryExamples-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1382,7 +1349,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.MerryExamples-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1407,7 +1373,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.MerryExamples-tvOSTests";

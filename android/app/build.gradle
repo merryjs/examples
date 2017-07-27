@@ -136,23 +136,18 @@ android {
 }
 
 
-ext {
-    supportVersion = '25.1.1'
-    frescoVersion = '1.4.0'
-}
 
 dependencies {
-//    compile project(':@merryjs/photo-viewer')
+
+    compile project(':@merryjs/photo-viewer')
+
     compile fileTree(dir: "libs", include: ["*.jar"])
 //    compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
-    compile 'com.github.stfalcon:frescoimageviewer:0.5.0'
-    compile "com.android.support:design:$supportVersion"
-    compile "com.android.support:appcompat-v7:$supportVersion"
-    compile "com.android.support:support-v4:$supportVersion"
-    compile "com.android.support:cardview-v7:$supportVersion"
-    compile "com.google.code.gson:gson:2.8.1"
-    compile "com.facebook.fresco:fresco:$frescoVersion"
+//    compile "com.android.support:design:$supportVersion"
+//    compile "com.android.support:appcompat-v7:$supportVersion"
+//    compile "com.android.support:support-v4:$supportVersion"
+//    compile "com.android.support:cardview-v7:$supportVersion"
 
 }
 

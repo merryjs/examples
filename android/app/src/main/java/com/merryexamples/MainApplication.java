@@ -4,12 +4,12 @@ import android.app.Application;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.react.ReactApplication;
-//import com.merryjs.PhotoViewer.MerryPhotoViewerPackage;
+import com.merryjs.PhotoViewer.MerryPhotoViewerPackage;
+
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
-import com.merryexamples.PhotoViewer.MerryPhotoViewerPackage;
 
 import java.util.Arrays;
 import java.util.List;

@@ -7,6 +7,8 @@ public class MerryPhotoViewOptions {
     public MerryPhotoData[] data;
     public String titlePagerColor;
     public String shareTextColor;
+    public String shareText;
+
     public String backgroundColor;
     public int initial;
     public boolean hideStatusBar;

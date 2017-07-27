@@ -54,6 +54,10 @@ public class MerryPhotoOverlay extends RelativeLayout {
     }
 
     public void setShareText(String text) {
+        tvShare.setText(text);
+    }
+
+    public void setShareContext(String text) {
         this.sharingText = text;
     }
 

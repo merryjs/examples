@@ -69,6 +69,7 @@ public class MerryPhotoViewerModule extends ReactContextBaseJavaModule {
         try {
             mIntent.putExtra("options", jsonObject.toString());
             currentActivity.startActivityForResult(mIntent, PHOTO_VIEWER_CODE);
+            promise.resolve("");
         } catch (Exception e) {
             promise.reject(E_FAILED_TO_SHOW_PHOTO_VIEWER, e);
         }
@@ -80,7 +81,6 @@ public class MerryPhotoViewerModule extends ReactContextBaseJavaModule {
             reactContext.getCurrentActivity().finishActivity(PHOTO_VIEWER_CODE);
         }
     }
-
 
 
 }

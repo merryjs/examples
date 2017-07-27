@@ -107,14 +107,17 @@ public class MerryPhotoViewActivity extends AppCompatActivity {
 
                 MerryPhotoData merryPhotoData = options.data[position];
                 String url = merryPhotoData.url;
+//                default use url
+                overlayView.setShareContext(url);
 
-                overlayView.setShareText(url);
                 overlayView.setDescription(merryPhotoData.summary);
                 overlayView.setTitleText(merryPhotoData.title);
 
                 String summaryColor = "#ffffff";
                 String titleColor = "#ffffff";
-
+                if (options.shareText != null) {
+                    overlayView.setShareText(options.shareText);
+                }
                 if (options.titlePagerColor != null) {
                     overlayView.setPagerTextColor(options.titlePagerColor);
                 }
